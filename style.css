@@ -1,1 +1,119 @@
-/* Add your CSS here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  background: #0071c5;
+  color: white;
+  padding: 30px 10px 20px 10px;
+}
+
+header img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Timeline container styles for horizontal scrolling */
+.timeline-container {
+  display: flex;           /* Arrange cards in a row */
+  flex-direction: row;
+  overflow-x: auto;        /* Allow horizontal scrolling */
+  overflow-y: hidden;
+  margin-bottom: 2em;
+  padding: 1em 0;
+  /* background: #f9f9f9; */ /* Uncomment if you want a background */
+  gap: 16px;               /* Space between cards */
+}
+
+/* Each timeline card styles */
+.timeline-card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 250px;            /* Fixed width for each card */
+  flex-shrink: 0;          /* Prevent cards from shrinking */
+  margin: 0;               /* Margin handled by gap in container */
+  padding: 1em;
+  transition: box-shadow 0.2s;
+}
+
+/* Highlight card on hover */
+.timeline-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Make images fit the card width */
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+/* Style for the scroll hint message */
+.timeline-scroll-hint {
+  flex-basis: 100%;
+  margin-top: 1em;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive: On small screens, cards take more width */
+@media (max-width: 500px) {
+  .timeline-card {
+    padding: 12px;
+    max-width: 98%;
+    width: 98%;
+  }
+}
+
+/* Footer styles (if you use a footer) */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #e0e0e0;
+  color: #333;
+  font-size: 1em;
+}
+
+/*
+Common CSS display types:
+
+1. display: block;
+   - The element starts on a new line and takes up the full width.
+   - Example: <div>, <p>, <h1>
+
+2. display: inline;
+   - The element does not start on a new line and only takes up as much width as needed.
+   - Example: <span>, <a>, <strong>
+
+3. display: inline-block;
+   - Like inline, but you can set width and height.
+   - Example: <img>
+
+4. display: none;
+   - The element is not shown on the page at all.
+
+5. display: flex;
+   - Makes the element a flex container for flexible layouts.
+
+6. display: grid;
+   - Makes the element a grid container (advanced, not for beginners).
+
+7. display: inline-flex;
+   - Like flex, but the container behaves like an inline element.
+
+8. display: table;
+   - Makes the element behave like a table.
+
+9. display: list-item;
+   - Makes the element behave like a list item (like <li>).
+
+These are the most common display types you'll use in CSS!
+*/
