@@ -43,16 +43,25 @@ header img {
   gap: 22px;               /* Space between cards */
   scroll-behavior: smooth; /* Smooth scrolling */
   /* Hide scrollbar for a cleaner look (optional) */
-  scrollbar-width: none; 
+  scrollbar-width: thin; /* Show a thin scrollbar in Firefox */
+  scrollbar-color: #0071c5 #e0e0e0; /* Thumb color and track color for Firefox */
 
   /* Enable scroll snap for horizontal scrolling */
   scroll-snap-type: x mandatory; /* Snap horizontally to each card */
 }
 .timeline-container::-webkit-scrollbar {
-  display: none; 
+  height: 14px; /* Make scrollbar visible and easy to use */
+  background: #e0e0e0; /* Track color */
+  border-radius: 8px;
 }
-
-
+.timeline-container::-webkit-scrollbar-thumb {
+  background: #0071c5; /* Thumb color: high contrast blue */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  border: 3px solid #e0e0e0; /* Space around thumb for accessibility */
+}
+.timeline-container::-webkit-scrollbar-thumb:hover {
+  background: #005fa3; /* Slightly darker blue on hover for feedback */
+}
 
 .timeline-card {
   /* Set a fixed width for each card */
@@ -114,6 +123,7 @@ header img {
 .timeline-scroll-hint {
   flex-basis: 100%;
   margin-top: 1.45em;
+  margin-bottom: 2.5em; /* Add more space below the scroll hint */
   font-style: italic;
   color: #ffffff;
   font-size: 1.35em;
@@ -239,8 +249,7 @@ header img {
 }
 
 .container {
-  background-color: #0071c5;
-  opacity: 0.8; /* Semi-transparent background */
+  background-color: rgb(0,113,197,0.8);
   max-width: 80%;
   margin: 10 auto; /* Center the container */
   font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat for container */
@@ -261,13 +270,43 @@ header img {
 /* Make all headings bold for better visibility */
 h1, h2, h3 {
   font-weight: bold;
+  font-family: "Sansation", Arial, sans-serif; /* Use Sansation for headings */
 }
 
 .newsletter {
+  text-align: center; /* Center all content in the newsletter section */
   justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 .newsletter-form {
+  display: inline-block; /* Center the form itself */
+  padding: 10px;
+}
+.newsletter input,
+.newsletter button {
   display: block;
-  justify-content: center;
-  margin: 0 auto; /* Center the form */
+  margin: 10px auto; /* Center input and button */
+}
+
+.newsletter button {
+  background-color: rgb(87, 56, 3);
+  border: 3px;
+  border-color: black;
+}
+
+.button {
+  background-color: #ecffe7; /* Use the same blue as the header */
+  color: rgb(0, 0, 0); /* White text for contrast */
+  padding: 10px 20px; /* Add some padding */
+  max-width: 150px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Increase font size for readability */
+  a {
+    color: rgb(87,56,3);
+    text-decoration: none; 
+    display: block; 
+    font-weight: bold;
+  }
 }

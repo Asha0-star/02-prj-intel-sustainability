@@ -16,6 +16,14 @@
 
 <!-- Add Bootstrap CSS for grid system -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script>
+  // This script checks the language and sets the direction
+  if (document.documentElement.lang === "ar") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+</script>
 </head>
 <body>
 
@@ -67,7 +75,7 @@
     <div class="timeline-card">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
+      <img src="img/2.jpg" alt="Microprocessor" />
       <p class="card-mobile-text">
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -85,7 +93,7 @@
     <div class="timeline-card">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
+      <img src="img/3.jpg" alt="8086 processor" />
       <p class="card-mobile-text">
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -102,7 +110,7 @@
     <div class="timeline-card">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
+      <img src="img/4.jpg" alt="386 processor" />
       <p class="card-mobile-text">
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -121,7 +129,7 @@
     <div class="timeline-card">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="img/Greenhouse2.jpg" alt="Placeholder Image" />
+      <img src="img/Greenhouse2.jpg" alt="greenhouse inetrior" />
       <p class="card-mobile-text">
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -143,7 +151,7 @@
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
       <!-- Fixed image path to use img/ folder -->
-      <img src="img/Rise-image.jpg" alt="Placeholder Image" />
+      <img src="img/Rise-image.jpg" alt="Stock image of a board meeting" />
       <p class="card-mobile-text">
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -163,7 +171,7 @@
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
       <!-- Fixed image path to use img/ folder -->
-      <img src="img/net0.jpg" alt="Placeholder Image" />
+      <img src="img/net0.jpg" alt="Tree standing in the grass" />
       <p class="card-mobile-text">
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -183,7 +191,7 @@
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
       <!-- Fixed image path to use img/ folder -->
-      <img src="img/OIP.jpg" alt="Placeholder Image" />
+      <img src="img/OIP.jpg" alt="Cityscape at night with car lights blurred into lines" />
       <p class="card-mobile-text">
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -202,7 +210,7 @@
     <div class="timeline-card">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="img/sustainability-summit.jpg" alt="img/OIP (1).jpg" />
+      <img src="img/sustainability-summit.jpg" alt="Intel sustainability graphic" />
       <p class="card-mobile-text">
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -219,25 +227,27 @@
     </div>
   </div>
   <!-- Message for users -->
-  <p class="timeline-scroll-hint">Scroll to view timeline | Hover over cards to learn more!</p>
+  <p class="timeline-scroll-hint mb-3 my-3">Scroll to view timeline | Hover over cards to learn more!</p>
 
   <!-- Information Section: Three Columns using Bootstrap grid -->
   <div class="container my-4">
     <div class="row">
       <!-- Column 1 -->
       <div class="information col-md-4 col-sm-12 mb-3">
-        <h2>RISE Strategy</h2>
+        <h2>RISE Strategy 📈</h2>
         <p>
           Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
           Intel sets ambitious 2030 goals, including driving industry-wide 
           progress on climate action, water stewardship, and waste reduction.
         </p>
         <!-- Learn More Button -->
+        <div class="button">
         <a href="#">Learn More</a>
+        </div>
       </div>
       <!-- Column 2 -->
       <div class="information col-md-4 col-sm-12 mb-3">
-        <h2>Commitment</h2>
+        <h2>Commitment 🤝</h2>
         <p>
           In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
           (Scope 1 and 2) by 2040. This commitment builds on decades of 
@@ -245,11 +255,13 @@
           industry.
         </p>
         <!-- Learn More Button -->
+        <div class="button">
         <a href="#">Learn More</a>
+        </div>
       </div>
       <!-- Column 3 -->
       <div class="information col-md-4 col-sm-12 mb-3">
-        <h2>Water &amp; Waste</h2>
+        <h2>Water &amp; Waste 💧</h2>
         <p>
           Intel conserves billions of gallons of water annually and 
           collaborates with local communities to restore watersheds.
@@ -257,19 +269,23 @@
           advance a circular economy.
         </p>
         <!-- Learn More Button -->
+         <div class="button">
         <a href="#">Learn More</a>
+        </div>
       </div>
     </div>
     <!-- Subscription Form -->
+     <div>
       <section class="newsletter">
-        <h2>Stay Up to Date! </h2>
+        <h2>Stay Up to Date 🌱! </h2>
         <form>
-  <div class="newsletter form">
+  <div class="newsletter-form">
     <p>Add your email address to get the latest on sustainable tech</p>
-    <input type="email" class="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <button type="submit" class="btn btn-primary">Sustain Contact</button>
+    <input type="email" class="email" id="email-input-field" aria-describedby="emailHelp">
+    <button type="submit" class="btn btn-primary">Sustain Contact </button>
   </div>
       </section>
+      </div>
   </div>
 
     
