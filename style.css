@@ -240,6 +240,7 @@ header img {
 
 .container {
   background-color: #0071c5;
+  opacity: 0.8; /* Semi-transparent background */
   max-width: 80%;
   margin: 10 auto; /* Center the container */
   font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat for container */
@@ -253,6 +254,7 @@ header img {
 .information col-md-4 col-sm-12 mb-3 {
   color: ffffff;
   font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat for information */
+  opacity: 1;
 
 }
 
