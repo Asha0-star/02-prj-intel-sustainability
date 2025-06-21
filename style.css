@@ -310,3 +310,42 @@ h1, h2, h3 {
     font-weight: bold;
   }
 }
+
+/* RTL (Right-to-Left) support for Arabic language */
+/* These styles are applied when the page direction is set to rtl (right-to-left) */
+[dir="rtl"] body {
+  direction: rtl; /* Set the base direction to right-to-left */
+  text-align: right; /* Align text to the right by default */
+}
+
+[dir="rtl"] header {
+  text-align: right; /* Header text aligns right */
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .timeline-container {
+  flex-direction: row-reverse; /* Cards go from right to left */
+}
+
+[dir="rtl"] .timeline-card {
+  text-align: right; /* Card text aligns right */
+}
+
+[dir="rtl"] .timeline-description {
+  text-align: right; /* Description aligns right */
+}
+
+[dir="rtl"] .container {
+  text-align: right; /* Info section aligns right */
+}
+
+[dir="rtl"] .newsletter {
+  text-align: right; /* Newsletter section aligns right */
+}
+
+[dir="rtl"] .timeline-scroll-hint {
+  text-align: right; /* Scroll hint aligns right */
+}
+
+/* End of RTL support section */
